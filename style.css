@@ -44,7 +44,8 @@ section {
  font-weight: 700;
 }
 
-button {
+
+.ajouter-panier {
   background-color: hsl(24, 95%, 50%);
   color: hsl(220, 85%, 10%);
   border-radius: 5px;
@@ -55,8 +56,6 @@ button {
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
-
-
 img {
   max-width: 100%;
   height: auto;
@@ -70,11 +69,6 @@ header {
   flex-wrap: wrap;
 }
 
-.pointures {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
 
 .logo {
   flex-shrink: 0;
@@ -88,6 +82,46 @@ header {
 
 .image {
   flex: 1 1 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-produit {
+   max-height: 500px;
+  object-fit: contain;
+}
+
+.avis {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.article-avis {
+  border: 1px solid hsl(220, 85%, 10%);
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+}
+
+.pointures {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  gap: 0.5rem;
+}
+.pointure {
+  background-color: hsl(220, 90%, 95%);
+  border: 1px solid hsl(220, 85%, 10%);
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  min-width: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+.pointure:hover {
+  background-color:  hsl(220, 85%, 10%);
+  color: hsl(220, 90%, 95%);
 }
 
 .infos {
