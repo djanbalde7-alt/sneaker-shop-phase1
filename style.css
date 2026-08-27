@@ -2,9 +2,33 @@
   box-sizing: border-box;
 }
 
+:root {
+  /* Couleurs */
+  --couleur-fond: hsl(220, 90%, 95%);
+  --couleur-texte: hsl(220, 85%, 10%);
+  --couleur-texte-secondaire: hsl(220, 20%, 40%);
+  --couleur-accent: hsl(24, 95%, 50%);
+  --couleur-accent-survol: hsl(24, 95%, 40%);
+
+  /* Espacements */
+  --espace-xs: 0.5rem;
+  --espace-s: 1rem;
+  --espace-m: 1.5rem;
+  --espace-l: 2rem;
+  --espace-xl: 3rem;
+  
+  /* Typographie */
+  --texte-s: 0.875rem;
+  --texte-m: 1rem;
+  --texte-l: 1.5rem;
+  --texte-xl: 2rem;
+  --texte-xxl: 3rem;
+}
+
+
 body {
-  background-color: hsl(220, 90%, 95%);
-  color: hsl(220, 85%, 10%);
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
   font-family: "Inter", sans-serif;
   line-height: 1.5;
   margin: 0;
@@ -19,25 +43,25 @@ main {
 h1 {
   letter-spacing: -0.02em;
   line-height: 1.2;
-  font-size: 3rem;
+  font-size: var(--espace-xl);
 }
 
 h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  margin-top: 3rem;
+  font-size: var(--espace-l);
+  margin-bottom: var(--espace-xs);
+  margin-top: var(--espace-xl);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: var(--espace-m);
 }
 
 p {
   max-width: 65ch;
 }
 section {
-  padding: 1.5rem 0;
-  margin: 0.5rem 0;
+  padding: var(--espace-m) 0;
+  margin: var(--espace-xs) 0;
 }
 
 .prix {
@@ -46,13 +70,13 @@ section {
 
 
 .ajouter-panier {
-  background-color: hsl(24, 95%, 50%);
-  color: hsl(220, 85%, 10%);
+  background-color: var(--couleur-accent);
+  color: var(--couleur-texte);
   border-radius: 5px;
   padding: 0.75rem 1.5rem;
   border: none;
-  font-size: 1rem;
-  margin-top: 1.5rem;
+  font-size: var(--espace-s);
+  margin-top: var(--espace-m);
   transition: background-color 0.2s ease;
   cursor: pointer;
 }
@@ -76,7 +100,7 @@ header {
 
 .produit {
   display: flex;
-  gap: 2rem;
+  gap: var(--espace-l);
   flex-wrap: wrap;
 }
 
@@ -94,40 +118,40 @@ header {
 .avis {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--espace-l);
 }
 
 .article-avis {
-  border: 1px solid hsl(220, 85%, 10%);
+  border: 1px solid var(--couleur-texte);
   border-radius: 5px;
-  padding: 1rem 1.5rem;
+  padding: var(--espace-s) var(--espace-m);
 }
 
 .pointures {
   display: flex;
   list-style: none;
   padding-left: 0;
-  gap: 0.5rem;
+  gap: var(--espace-xs);
 }
 .pointure {
-  background-color: hsl(220, 90%, 95%);
-  border: 1px solid hsl(220, 85%, 10%);
+  background-color:var(--couleur-fond);
+  border: 1px solid var(--couleur-texte);
   border-radius: 5px;
   transition: background-color 0.2s ease;
   min-width: 2.5rem;
   text-align: center;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--espace-m);
 }
 .pointure:hover {
-  background-color:  hsl(220, 85%, 10%);
-  color: hsl(220, 90%, 95%);
+  background-color:  var(--couleur-texte);
+  color: var(--couleur-fond);
 }
 
 .infos {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--espace-s);
   flex: 1 1 300px;
 }
 
@@ -136,11 +160,11 @@ nav ul {
   padding-left: 0;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: var(--espace-l);
 }
 
 nav a {
-  color: hsl(220, 85%, 10%);
+  color: var(--couleur-texte);
   text-decoration: none;
 }
 
@@ -149,12 +173,12 @@ button:hover {
 }
 
 a:focus-visible, button:focus-visible {
-  outline: 2px solid hsl(24, 95%, 50%);
+  outline: 2px solid var(--couleur-accent);
   outline-offset: 2px;
 }
 
 footer {
-  color: hsl(220, 20%, 40%);
-  font-size: 0.875rem;
-  padding: 1.5rem 2rem;
+  color: var(--couleur-texte-secondaire);
+  font-size: var(--texte-s);
+  padding: var(--espace-m) var(--espace-l);
 }
