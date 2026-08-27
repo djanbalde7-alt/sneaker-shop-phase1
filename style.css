@@ -4,7 +4,7 @@
 
 :root {
   /* Couleurs */
-  --couleur-fond: hsl(220, 90%, 95%);
+  --couleur-fond: hsl(240, 11%, 95%);
   --couleur-texte: hsl(220, 85%, 10%);
   --couleur-texte-secondaire: hsl(220, 20%, 40%);
   --couleur-accent: hsl(24, 95%, 50%);
@@ -16,13 +16,16 @@
   --espace-m: 1.5rem;
   --espace-l: 2rem;
   --espace-xl: 3rem;
-  
+
   /* Typographie */
   --texte-s: 0.875rem;
   --texte-m: 1rem;
   --texte-l: 1.5rem;
   --texte-xl: 2rem;
   --texte-xxl: 3rem;
+
+  /* Bordures */
+  --bordure-rond: 5px;
 }
 
 
@@ -44,16 +47,19 @@ h1 {
   letter-spacing: -0.02em;
   line-height: 1.2;
   font-size: var(--espace-xl);
+  font-weight: 400;
 }
 
 h2 {
   font-size: var(--espace-l);
   margin-bottom: var(--espace-xs);
   margin-top: var(--espace-xl);
+  font-weight: 400;
 }
 
 h3 {
   font-size: var(--espace-m);
+  font-weight: 400;
 }
 
 p {
@@ -111,7 +117,7 @@ header {
   justify-content: center;
 }
 .img-produit {
-   max-height: 500px;
+  max-height: 500px;
   object-fit: contain;
 }
 
@@ -123,8 +129,43 @@ header {
 
 .article-avis {
   border: 1px solid var(--couleur-texte);
-  border-radius: 5px;
+  border-radius: var(--bordure-rond);
   padding: var(--espace-s) var(--espace-m);
+}
+
+.grille-produit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--espace-m);
+}
+
+.img-similaire {
+  height: 250px;
+  object-fit: cover;
+}
+
+.article-similaire {
+  border-radius: var(--bordure-rond);
+  border: 1px solid var(--couleur-texte);
+  padding: var(--espace-s);
+}
+
+.lien-similaire {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-m);
+  height: 100%;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.article-prix {
+  margin-top: auto;
+}
+
+.lien-similaire:hover {
+   transform: scale(1.04);
 }
 
 .pointures {
@@ -141,7 +182,7 @@ header {
   min-width: 2.5rem;
   text-align: center;
   cursor: pointer;
-  padding: var(--espace-m);
+  padding: var(--espace-s);
 }
 .pointure:hover {
   background-color:  var(--couleur-texte);
